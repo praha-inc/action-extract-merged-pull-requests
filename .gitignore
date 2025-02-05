@@ -1,0 +1,16 @@
+# Misc
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode
+.idea
+.devcontainer
+
+# Dependencies
+node_modules
+
+# Logs
+logs
+*.log
+.pnpm-debug.log*

@@ -1,0 +1,22 @@
+name: Extract Merged Pull Requests
+
+description: Extracts a list of merged pull requests between the specified base and head commit.
+
+inputs:
+  github-token:
+    description: The GitHub token used to authenticate with the GitHub API.
+    default: ${{ github.token }}
+  base-ref:
+    description: The commit, branch, or tag representing the start of the comparison.
+    required: true
+  head-ref:
+    description: The commit, branch, or tag representing the end of the comparison. If not specified, defaults to HEAD.
+    default: HEAD
+
+outputs:
+  pull-requests:
+    description: A list of merged pull requests between the specified base and head commit.
+
+runs:
+  using: node20
+  main: dist/index.js
